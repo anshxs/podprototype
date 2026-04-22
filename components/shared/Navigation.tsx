@@ -25,14 +25,14 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="w-64 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/80 backdrop-blur-xl border-r border-cyan-400/20 min-h-screen p-6 sticky top-0 flex flex-col">
+    <nav className="w-64 bg-sidebar/95 border-r border-sidebar-border min-h-screen p-6 sticky top-0 flex flex-col">
       <div className="mb-8">
         <div className="flex items-center justify-between gap-2 mb-1">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
-              <BookOpen className="w-4 h-4 text-white" />
+            <div className="w-6 h-6 rounded-lg bg-primary flex items-center justify-center">
+              <BookOpen className="w-4 h-4 text-primary-foreground" />
             </div>
-            <h1 className="text-xl font-bold gradient-text">Study Planner</h1>
+            <h1 className="text-xl font-semibold tracking-tight text-foreground">Study Planner</h1>
           </div>
           <NotificationBell />
         </div>
@@ -49,13 +49,13 @@ export function Navigation() {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex items-center gap-3 px-4 py-2 rounded-lg transition-all smooth-transition group',
+                'flex items-center gap-3 px-4 py-2 rounded-lg transition-all smooth-transition group border border-transparent',
                 isActive
-                  ? 'bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/50 text-cyan-300 shadow-[0_0_15px_rgba(0,217,255,0.2)]'
-                  : 'text-foreground hover:bg-slate-800/50 hover:border hover:border-cyan-400/30'
+                  ? 'bg-secondary text-foreground border-border shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/70 hover:border-border'
               )}
             >
-              <Icon className={cn('w-5 h-5', isActive && 'text-primary')} />
+              <Icon className={cn('w-5 h-5', isActive && 'text-foreground')} />
               <span className="font-medium text-sm">{item.label}</span>
             </Link>
           );

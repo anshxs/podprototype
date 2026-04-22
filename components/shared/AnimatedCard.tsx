@@ -21,7 +21,7 @@ export function AnimatedCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      whileHover={hoverable ? { y: -4, boxShadow: '0 20px 40px rgba(0, 217, 255, 0.15)' } : undefined}
+      whileHover={hoverable ? { y: -4, boxShadow: '0 20px 40px rgba(15, 23, 42, 0.12)' } : undefined}
       className={className}
     >
       {children}

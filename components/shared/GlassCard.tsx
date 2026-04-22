@@ -16,8 +16,8 @@ export function GlassCard({
 }: GlassCardProps) {
   const variants = {
     primary: 'glass glow-primary',
-    secondary: 'glass glow-secondary',
-    accent: 'glass glow-accent',
+    secondary: 'glass glow-secondary bg-muted/60',
+    accent: 'glass glow-accent bg-card',
   };
 
   return (
